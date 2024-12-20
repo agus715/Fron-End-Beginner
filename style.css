@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B0E0E6; /* Warna pastel biru muda */
+    color: #2F4F4F; /* Warna teks gelap untuk kontras */
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid #D3D3D3; /* Border pastel abu-abu */
+    border-radius: 10px;
+    background-color: #f5f5f5; /* Latar belakang pastel krem terang */
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: #6B8E23; /* Hijau pastel untuk judul */
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: #7aad5b; /* Warna hijau pastel */
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #D3D3D3; /* Border pastel abu-abu */
+}
+
+.input_section > form > .input > label {
+    color: #484848; /* Ungu pastel untuk label */
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: #484848; /* Ungu pastel untuk label */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #D3D3D3; /* Border pastel abu-abu */
+    border-radius: 10px;
+    background-color: #F5F5F5; /* Latar belakang pastel krem terang */
+}
+
+.search_section > h2 {
+    color: #7aad5b; /* Hijau pastel untuk judul */
+}
+
+.search_section > form {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+.search_section > form > label {
+    display: flex;
+    align-items: center;
+}
+
+.search_section > form > input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #D3D3D3; /* Border pastel abu-abu */
+}
+
+.search_section > form > button {
+    background-color: #8BBF6B; /* Warna hijau pastel */
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    border: 1px solid #D3D3D3; /* Border pastel abu-abu */
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #F0F8FF; /* Warna latar belakang pastel biru terang */
+}
+
+.book_shelf > h2 {
+    color: #2F4F4F; /* Warna teks gelap untuk keterbacaan */
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid #D3D3D3; /* Border pastel abu-abu */
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: #FFF8DC; /* Latar belakang item buku pastel krem */
+}
+
+.book_shelf > .book_list > .book_item > h3, p {
+    margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+    background-color: #B0E57C; /* Warna hijau pastel lembut */
+    color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+    background-color: #F5A6A0; /* Warna merah pastel lembut */
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    .input_section, .search_section, .book_shelf {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search_section > form {
+        grid-template-columns: 1fr;
+    }
+
+    .book_shelf > .book_list > .book_item {
+        margin: 5px 0;
+    }
+
+    .book_shelf > .book_list > .book_item > .action > button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .head_bar {
+        padding: 8px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .input_section > form > button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .book_shelf > .book_list > .book_item {
+        padding: 10px;
+    }
+
+    .book_shelf > .book_list > .book_item > h3, p {
+        font-size: 14px;
+    }
+
+    .input_section > form > .input > input {
+        padding: 10px;
+    }
+}
